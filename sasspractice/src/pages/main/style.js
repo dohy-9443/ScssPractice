@@ -1,8 +1,21 @@
 import styled from "styled-components";
 
+import { media, T, M } from "../../utils/mt";
+
 export const Container = styled.div`
-  width: 500px;
+  width: 700px;
+  background: violet;
   margin: 100px auto;
+
+  ${media.tablet`
+    width: ${T(500)};
+    background: green;
+  `}
+
+  ${media.mobile`
+    width: ${M`300`};
+    background: tan;
+  `}
 `;
 
 export const Ul = styled.ul`
